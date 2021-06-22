@@ -1,5 +1,7 @@
 import 'package:bloc_example/modules/authenticate/login/login_bloc/login_bloc.dart';
 import 'package:bloc_example/modules/authenticate/login/screens/login_screen.dart';
+import 'package:bloc_example/modules/blog/bloc/blog_bloc.dart';
+import 'package:bloc_example/modules/blog/screen/blog_screen.dart';
 import 'package:bloc_example/modules/counter/cubit/counter_cubit.dart';
 import 'package:bloc_example/modules/todo/bloc/todo_bloc.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +26,9 @@ class MyApp extends StatelessWidget {
           ),
           BlocProvider<TodoBloc>(
             create: (context) => TodoBloc(),
+          ),
+          BlocProvider<BlogBloc>(
+            create: (context) => BlogBloc(),
           )
         ],
         child: MaterialApp(
@@ -32,7 +37,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          home: LoginScreen(),
+          home: BlogScreen(),
         ));
   }
 }

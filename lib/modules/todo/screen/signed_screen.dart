@@ -92,9 +92,9 @@ class _SignedScreenState extends State<SignedScreen> {
             Expanded(
               child: BlocConsumer<TodoBloc, TodoState>(
                 listener: (context, state) {
-                  if (state is AddedTodoState) {
-                    todoBloc.add(LoadTodoEvent(widget.userId));
-                  }
+                  // if (state is AddedTodoState) {
+                  //   todoBloc.add(LoadTodoEvent(widget.userId));
+                  // }
                 },
                 builder: (context, state) {
                   if (state is LoadingTodoState) {
